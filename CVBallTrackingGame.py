@@ -68,6 +68,13 @@ while run:
 
     ImageContours, ContoursFound = GetBallContours(frame, MaskedImage)
 
+    # This executes if there are contours available
+    if ContoursFound:
+
+        # This variable stores the Center X & Y, and the Area of the Contour Respectively
+        ContourData = ContoursFound[0]['center'][0], ContoursFound[0]['center'][1], int(
+            ContoursFound[0]['area'])
+
     cv2.imshow("Ball Tracking Window", ImageContours)
 
     # Stops the window if the 'q' button on the keyboard is pressed
