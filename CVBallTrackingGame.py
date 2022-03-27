@@ -51,6 +51,10 @@ CamVideo = cv2.VideoCapture(0)
 CamVideo.set(3, 640)
 CamVideo.set(4, 480)
 
+# Reading in the first frame to get the Image Width & Height
+success, frame = CamVideo.read()
+FrameWidth, FrameHeight, _ = frame.shape
+
 run = True  # Variable to control the while loop below
 
 # Creating an object instance of the ColorDetector()
@@ -71,8 +75,13 @@ while run:
     # This executes if there are contours available
     if ContoursFound:
 
-        # This variable stores the Center X & Y, and the Area of the Contour Respectively
-        ContourData = ContoursFound[0]['center'][0], ContoursFound[0]['center'][1], int(
+        """
+
+            This variable stores the Center X & Y, and the Area of the Contour Respectively
+            Because OpenCV uses a different convention for coordinates, we will have to subtract the Center Y from the FrameHeight. Doing this will match the convention of Unity which will require this data in the game.
+
+         """
+        ContourData = ContoursFound[0]['center'][0], FrameHeight - ContoursFound[0]['center'][1], int(
             ContoursFound[0]['area'])
 
     cv2.imshow("Ball Tracking Window", ImageContours)
