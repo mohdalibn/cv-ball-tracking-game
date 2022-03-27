@@ -14,3 +14,13 @@ class ColorDetector:
             self.OpenControls()
 
     # This function will the color controls window
+    def OpenControls(self):
+
+        cv2.namedWindow("Color Controls")
+        cv2.resizeWindow("Color Controls", 640, 250)
+        cv2.createTrackbar("Hue Min", "TrackBars", 0, 179, self.empty)
+        cv2.createTrackbar("Hue Max", "TrackBars", 179, 179, self.empty)
+        cv2.createTrackbar("Sat Min", "TrackBars", 0, 255, self.empty)
+        cv2.createTrackbar("Sat Max", "TrackBars", 255, 255, self.empty)
+        cv2.createTrackbar("Val Min", "TrackBars", 0, 255, self.empty)
+        cv2.createTrackbar("Val Max", "TrackBars", 255, 255, self.empty)
