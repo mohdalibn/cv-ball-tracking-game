@@ -12,7 +12,7 @@ import cv2
 
 
 # A function that's going to return the ball contours
-def GetBallContours(frame, findFrame, minArea=1000, sort=True, filter=0, DrawContour=True, c=(255, 0, 0)):
+def GetBallContours(frame, findFrame, minArea=1000, sort=True, filter=0, DrawContour=True, c=(0, 255, 0)):
 
     ContoursFound = []
     ImageContours = frame.copy()
@@ -27,7 +27,7 @@ def GetBallContours(frame, findFrame, minArea=1000, sort=True, filter=0, DrawCon
 
             if len(approx) == filter or filter == 0:
                 if DrawContour:
-                    cv2.DrawContourtours(ImageContours, contour, -1, c, 3)
+                    cv2.drawContours(ImageContours, contour, -1, c, 3)
                 x, y, w, h = cv2.boundingRect(approx)
                 cx, cy = x + (w // 2), y + (h // 2)
                 cv2.rectangle(ImageContours, (x, y), (x + w, y + h), c, 2)
@@ -36,7 +36,7 @@ def GetBallContours(frame, findFrame, minArea=1000, sort=True, filter=0, DrawCon
                 ContoursFound.append({"contour": contour, "area": area, "bbox": [
                                      x, y, w, h], "center": [cx, cy]})
 
-    # Executes if the sorted flag is true
+    # Executes if the sorted flag is true. The Sorting occurs in decending order
     if sort:
         ContoursFound = sorted(
             ContoursFound, key=lambda x: x["area"], reverse=True)
@@ -66,7 +66,9 @@ while run:
     # This line calls the UpdateFrame Function that returns the Masked Image & Colored Image
     MaskedImage, ColoredImage = ColorDetector.UpdateFrame(frame, HSVColor)
 
-    cv2.imshow("Ball Tracking Window", MaskedImage)
+    ImageContours, ContoursFound = GetBallContours(frame, MaskedImage)
+
+    cv2.imshow("Ball Tracking Window", ImageContours)
 
     # Stops the window if the 'q' button on the keyboard is pressed
     key = cv2.waitKey(1)
