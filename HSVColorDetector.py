@@ -48,13 +48,13 @@ class ColorDetector:
     # This method will get HSV Values of the color that's passed as an argument to this function
     def GetColorHSVVals(self, Color):
 
-        if Color == 'red':
+        if Color.lower() == 'red':
             OutputHSV = {'HueMin': 146, 'SatMin': 141, 'ValMin': 77,
                          'HueMax': 179, 'SatMax': 255, 'ValMax': 255}
-        elif Color == 'green':
+        elif Color.lower() == 'green':
             OutputHSV = {'HueMin': 44, 'SatMin': 79, 'ValMin': 111,
                          'HueMax': 79, 'SatMax': 255, 'ValMax': 255}
-        elif Color == 'blue':
+        elif Color.lower() == 'blue':
             OutputHSV = {'HueMin': 103, 'SatMin': 68, 'ValMin': 130,
                          'HueMax': 128, 'SatMax': 255, 'ValMax': 255}
         else:
