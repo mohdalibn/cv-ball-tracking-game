@@ -9,9 +9,11 @@
 # Importing the required libraries for the project
 import HSVColorDetector
 import cv2
-
+import socket
 
 # A function that's going to return the ball contours
+
+
 def GetBallContours(frame, findFrame, minArea=1000, sort=True, filter=0, DrawContour=True, c=(0, 255, 0)):
 
     ContoursFound = []
@@ -63,6 +65,12 @@ HSVColor = "red"
 # HSVColor = {'HueMin': 147, 'SatMin': 37, 'ValMin': 58,
 #             'HueMax': 179, 'SatMax': 255, 'ValMax': 255}
 
+
+# Using the sockets module, we'll send the contour data to Unity using the UDP Protocol(socket.SOCK_DGRAM)
+GameSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+ServerIPAddressPort = ("127.0.0.1", 2001)
+
+
 while run:
 
     success, frame = CamVideo.read()
@@ -83,6 +91,11 @@ while run:
          """
         ContourData = ContoursFound[0]['center'][0], FrameHeight - ContoursFound[0]['center'][1], int(
             ContoursFound[0]['area'])
+
+        # Filtering the data & before sending it to Unity
+        ContourData = str(ContourData)
+        ContourData = str.encode(ContourData)
+        GameSocket.sendto(ContourData, ServerIPAddressPort)
 
     cv2.imshow("Ball Tracking Window", ImageContours)
 
