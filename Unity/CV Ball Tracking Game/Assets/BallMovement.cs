@@ -33,7 +33,7 @@ public class BallMovement : MonoBehaviour
         // Now, we need to pass these ContourInfo Data to our Ball Object
         // We divide these values by 100 & 1000 respectively as Unity Coordinates move in small fractions
         float BallXPos = 5 - float.Parse(ContourInfo[0]) / 100;
-        float BallYPos = float.Parse(ContourInfo[1]) / 150;
+        float BallYPos = float.Parse(ContourInfo[1]) / 200;
         float BallArea = -10 + float.Parse(ContourInfo[2]) / 1000;
 
 

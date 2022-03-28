@@ -97,6 +97,8 @@ while run:
         ContourData = str.encode(ContourData)
         GameSocket.sendto(ContourData, ServerIPAddressPort)
 
+    ImageContours = cv2.resize(ImageContours, (0, 0), None, 0.5, 0.5)
+
     cv2.imshow("Ball Tracking Window", ImageContours)
 
     # Stops the window if the 'q' button on the keyboard is pressed
