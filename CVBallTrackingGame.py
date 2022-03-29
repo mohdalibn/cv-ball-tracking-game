@@ -109,5 +109,6 @@ while run:
 
 
 # These lines are to close the port & destroy any open OpenCV Windows
+CamVideo.release()
 GameSocket.close()
 cv2.destroyAllWindows()
