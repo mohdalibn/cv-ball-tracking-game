@@ -68,7 +68,7 @@ HSVColor = "red"
 
 # Using the sockets module, we'll send the contour data to Unity using the UDP Protocol(socket.SOCK_DGRAM)
 GameSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-ServerIPAddressPort = ("127.0.0.1", 2001)
+ServerIPAddressPort = ("127.0.0.1", 1126)
 
 
 while run:
@@ -105,5 +105,9 @@ while run:
     key = cv2.waitKey(1)
     if key == 81 or key == 113:
         run = False
-        cv2.destroyAllWindows()
         break
+
+
+# These lines are to close the port & destroy any open OpenCV Windows
+GameSocket.close()
+cv2.destroyAllWindows()

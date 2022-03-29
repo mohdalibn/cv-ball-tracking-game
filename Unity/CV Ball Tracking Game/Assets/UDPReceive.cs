@@ -10,7 +10,7 @@ public class UDPReceive : MonoBehaviour
 
     Thread receiveThread;
     UdpClient client; 
-    public int port = 5052;
+    public int port = 1126;
     public bool startRecieving = true;
     public bool printToConsole = false;
     public string data;
@@ -40,6 +40,7 @@ public class UDPReceive : MonoBehaviour
                 byte[] dataByte = client.Receive(ref anyIP);
                 data = Encoding.UTF8.GetString(dataByte);
 
+                // This line prints the data to the Unity Editor Console if the flag is set to true
                 if (printToConsole) { print(data); }
             }
             catch (Exception err)
@@ -47,6 +48,9 @@ public class UDPReceive : MonoBehaviour
                 print(err.ToString());
             }
         }
+
+        client.Close();
+
     }
 
 }
