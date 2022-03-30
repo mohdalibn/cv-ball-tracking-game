@@ -68,7 +68,7 @@ HSVColor = "red"
 
 # Using the sockets module, we'll send the contour data to Unity using the UDP Protocol(socket.SOCK_DGRAM)
 GameSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-ServerIPAddressPort = ("127.0.0.1", 1126)
+ServerIPAddressPort = ("127.0.0.1", 2005)
 
 
 while run:
@@ -89,6 +89,11 @@ while run:
             Because OpenCV uses a different convention for coordinates, we will have to subtract the Center Y from the FrameHeight. Doing this will match the convention of Unity which will require this data in the game.
 
          """
+
+        CenterXPos = ContoursFound[0]['center'][0]
+        CenterYPos = FrameHeight - ContoursFound[0]['center'][1]
+        BallArea = int(ContoursFound[0]['area'])
+
         ContourData = ContoursFound[0]['center'][0], FrameHeight - ContoursFound[0]['center'][1], int(
             ContoursFound[0]['area'])
 
@@ -96,6 +101,9 @@ while run:
         ContourData = str(ContourData)
         ContourData = str.encode(ContourData)
         GameSocket.sendto(ContourData, ServerIPAddressPort)
+        # This is test print statement to check the values in the console
+        print(5 - CenterXPos/100, -0.5 + CenterYPos /
+              200, -10 + BallArea/1000)
 
     ImageContours = cv2.resize(ImageContours, (0, 0), None, 0.5, 0.5)
 
