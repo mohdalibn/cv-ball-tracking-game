@@ -10,9 +10,10 @@ public class RestartGame : MonoBehaviour
 
     private void Start()
     {
-        // fader.gameObject.SetActive(true);
-        LeanTween.scale(fader, new Vector3(1, 1, 1), 0);
-        LeanTween.scale(fader, Vector3.zero, 0.5f).setEase(LeanTweenType.easeInOutQuad).setOnComplete(() =>{
+         // ALPHA/OPACITY ANIMATION
+        fader.gameObject.SetActive(true);
+        LeanTween.alpha(fader, 1, 0);
+        LeanTween.alpha(fader, 0, 0.5f).setOnComplete(() =>{
             fader.gameObject.SetActive(false);
         });
     }
@@ -28,12 +29,13 @@ public class RestartGame : MonoBehaviour
     // This method will be used to go back to the Main Menu Scene when the back button is pressed
     public void BackToMenu()
     {
-        fader.gameObject.SetActive(true);
-        LeanTween.scale(fader, Vector3.zero, 0f);
-        LeanTween.scale(fader, new Vector3(1, 1, 1), 0.5f).setEase(LeanTweenType.easeInOutQuad).setOnComplete(() => {
+        
+         fader.gameObject.SetActive(true);
+        LeanTween.alpha(fader, 0, 0);
+        LeanTween.alpha(fader, 1, 0.5f).setOnComplete(() =>{
             SceneManager.LoadScene("Main Menu");
         });
-        
+       
     }
 
 }
