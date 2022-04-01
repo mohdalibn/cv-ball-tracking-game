@@ -974,6 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3e09f44ea706d48ad4db110874f460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fader: {fileID: 57479604}
 --- !u!1 &1712257596
 GameObject:
   m_ObjectHideFlags: 0

@@ -2820,6 +2820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aab40ea8ff9c4a4bb0913f01b53b77a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fader: {fileID: 1813195617}
 --- !u!1 &1278227706
 GameObject:
   m_ObjectHideFlags: 0
