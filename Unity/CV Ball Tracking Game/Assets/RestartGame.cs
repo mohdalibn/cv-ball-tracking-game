@@ -10,4 +10,11 @@ public class RestartGame : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    // This method will be used to go back to the Main Menu Scene when the back button is pressed
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
 }
