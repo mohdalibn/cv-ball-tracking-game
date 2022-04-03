@@ -4,6 +4,7 @@
 <!-- Project Images -->
 ![GameMainMenu](https://user-images.githubusercontent.com/95453430/161451448-f93d9f67-8726-4fb0-b03c-e0d341833a3b.png)
 
+![GamePlayScreen](https://user-images.githubusercontent.com/95453430/161451492-6c939b7b-090e-49b6-88aa-bb9e68d91c90.png)
 
 <!-- Project Description -->
 # ![project-description (11)](https://user-images.githubusercontent.com/95453430/161440805-8d37a946-8b44-46e3-a7a5-6b785e5fcce3.svg)
