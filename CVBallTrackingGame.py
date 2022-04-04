@@ -68,7 +68,7 @@ HSVColor = "red"
 
 # Using the sockets module, we'll send the contour data to Unity using the UDP Protocol(socket.SOCK_DGRAM)
 GameSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-ServerIPAddressPort = ("127.0.0.1", 2005)
+ServerIPAddressPort = ("127.0.0.1", 2022)
 
 
 while run:
@@ -105,7 +105,7 @@ while run:
         print(5 - CenterXPos/100, -0.5 + CenterYPos /
               200, -10 + BallArea/1000)
 
-    ImageContours = cv2.resize(ImageContours, (0, 0), None, 0.5, 0.5)
+    ImageContours = cv2.resize(ImageContours, (0, 0), None, 0.7, 0.7)
 
     cv2.imshow("Ball Tracking Window", ImageContours)
 

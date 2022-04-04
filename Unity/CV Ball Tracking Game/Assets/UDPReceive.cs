@@ -10,7 +10,7 @@ public class UDPReceive : MonoBehaviour
 
     Thread receiveThread;
     UdpClient client; 
-    public int port = 1126;
+    public int port;
     public bool startRecieving = true;
     public bool printToConsole = false;
     public string data;
@@ -18,7 +18,7 @@ public class UDPReceive : MonoBehaviour
 
     public void Start()
     {
-
+        port = 2022
         receiveThread = new Thread(
             new ThreadStart(ReceiveData));
         receiveThread.IsBackground = true;
@@ -49,7 +49,7 @@ public class UDPReceive : MonoBehaviour
             }
         }
 
-        client.Close();
+        // client.Close();
 
     }
 
