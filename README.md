@@ -23,3 +23,17 @@ The **CV Ball Tracking Game** is a **Computer Vision** project in which the user
 
 <!-- How To Use Project -->
 # ![how-to-use-project (6)](https://user-images.githubusercontent.com/95453430/161440811-26edcf11-1238-4348-8ecb-065a18f860ce.svg)
+
+**Install the following Python libraries in your Virtual Environment using PIP**.
+
+*Note: The library names are **CASE-SENSITIVE** for PIP installations below. Make sure your type them correctly.*
+
+*Install OpenCV for Python*
+```Python
+pip install opencv-python
+```
+
+*Install Numpy for Python*
+```Python
+pip install numpy
+```
