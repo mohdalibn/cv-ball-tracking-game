@@ -18,7 +18,7 @@ public class UDPReceive : MonoBehaviour
 
     public void Start()
     {
-        port = 2022
+        port = 2022;
         receiveThread = new Thread(
             new ThreadStart(ReceiveData));
         receiveThread.IsBackground = true;
