@@ -9,7 +9,7 @@
 <!-- Project Description -->
 # ![project-description (11)](https://user-images.githubusercontent.com/95453430/161440805-8d37a946-8b44-46e3-a7a5-6b785e5fcce3.svg)
 
-The **CV Ball Tracking Game** is a **Computer Vision** project in which the user is able to control the **ball in-game** using a **Red Colored Ball** where the image data is fed through their Webcam/Camera. The game is made using **Unity** and scripts handling the logic and network connection all were written in **C#**.
+The **CV Ball Tracking Game** is a **Computer Vision** project in which the user is able to control the **ball in-game** using a **Red Colored Ball** where the image data is fed through their Webcam/Camera. The game is made using **Unity** and scripts handling the recieving of data and logics were all were written in **C#**. The **Python Script** and the **Unity Game** communicated through a **UDP connection**. The screen coordinates of the ball are extracted using **OpenCV** through the custom **HSVColorDetector module**. This data is then encoded and sent from the **Python Script** using the **socket** library to the game which is then received by a **C#** script, decodes it, and other logical **C#** scripts.
 
 <!-- Project Tech-Stack -->
 # ![technologies-used (11)](https://user-images.githubusercontent.com/95453430/161440810-a43d9988-a19b-4c9d-a595-5f096f127d05.svg)
