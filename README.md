@@ -32,6 +32,9 @@ https://unity3d.com/get-unity/download
 **Download & Install Unity Editor 2020.30f1:**
 https://unity3d.com/unity/whats-new/2020.3.0
 
+**Install the LeanTween module for Unity from the asset store:**
+https://assetstore.unity.com/packages/tools/animation/leantween-3595
+
 **Install the following Python libraries in your Virtual Environment using PIP**.
 
 *Note: The library names are **CASE-SENSITIVE** for PIP installations below. Make sure your type them correctly.*
