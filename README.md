@@ -2,6 +2,8 @@
 # ![cv-ball-tracking-game](https://user-images.githubusercontent.com/95453430/161440799-106b786a-70ec-4dd1-b87f-53232e0b4e32.svg)
 
 <!-- Project Images -->
+![Main Project Image](https://user-images.githubusercontent.com/95453430/162502552-b5c57946-f457-4bcc-8fff-62fb372bbdc8.png)
+
 ![GameMainMenu](https://user-images.githubusercontent.com/95453430/161451448-f93d9f67-8726-4fb0-b03c-e0d341833a3b.png)
 
 ![GamePlayScreen](https://user-images.githubusercontent.com/95453430/161451492-6c939b7b-090e-49b6-88aa-bb9e68d91c90.png)
