@@ -32,7 +32,7 @@ https://unity3d.com/get-unity/download
 **Download & Install Unity Editor 2020.30f1:**
 https://unity3d.com/unity/whats-new/2020.3.0
 
-**Download the CV Ball Tracking Game Unity Folder and place it in the Unity folder in the root directory:**
+**Download the CV Ball Tracking Game Unity Folder and place it in a new folder called Unity in the root directory:**
 https://www.mediafire.com/folder/56ctovga52bwc/CV_Ball_Tracking_Game
 
 **Install the LeanTween asset for Unity from the asset store:**
@@ -55,7 +55,7 @@ Download a copy of this repository onto your local machine and extract it into a
 - Create a Virtual Environment in that folder.
 - Install all the required Python libraries mentioned above.
 - Install Unity Hub & Unity Editor using the links above.
-- After the previous step, download the CV Ball Tracking Game folder from the MediaFire link provided above and place it into the Unity folder in the root directory.
+- After the previous step, download the CV Ball Tracking Game folder from the MediaFire link provided above and place it into a new folder called Unity in the root directory.
 - Select the **CV Ball Tracking Game** folder to open in Unity Editor.
 - Install the LeanTween asset from the asset store from the link above.
 - Open a Command Prompt/Terminal in the **Root Directory** of the Project.
