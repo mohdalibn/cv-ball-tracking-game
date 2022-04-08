@@ -26,6 +26,12 @@ The **CV Ball Tracking Game** is a **Computer Vision** project in which the user
 <!-- How To Use Project -->
 # ![how-to-use-project (6)](https://user-images.githubusercontent.com/95453430/161440811-26edcf11-1238-4348-8ecb-065a18f860ce.svg)
 
+**Download & Install Unity hub:**
+https://unity3d.com/get-unity/download
+
+**Download & Install Unity Editor 2020.30f1:**
+https://unity3d.com/unity/whats-new/2020.3.0
+
 **Install the following Python libraries in your Virtual Environment using PIP**.
 
 *Note: The library names are **CASE-SENSITIVE** for PIP installations below. Make sure your type them correctly.*
