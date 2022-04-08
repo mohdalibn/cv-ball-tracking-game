@@ -60,6 +60,6 @@ Download a copy of this repository onto your local machine and extract it into a
 python CVBallTrackingGame.py
 ```
 - Simultaneously, click on the run button in the opened Unity project.
-- get a red ball to use to play the game.
+- get a red ball to use in the game.
 
 - Enjoying playing the game!
